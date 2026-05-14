@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segelflugverein Alpenblick</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Hero Section */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('segelflug.jpg') center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-attachment: fixed;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #4DA8FF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+.button:hover {
+    background: #3d8dd9;
+    transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+    padding: 80px 10%;
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #4DA8FF;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(77, 168, 255, 0.2);
+}
+
+.feature-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #4DA8FF;
+    margin-bottom: 10px;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Webcam Section */
+.webcam {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.webcam iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 12px;
+}
+
+.webcam p {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+/* Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #4DA8FF;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info strong {
+    color: #2c3e50;
+    min-width: 100px;
+}
+
+/* Form */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #4DA8FF;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4DA8FF;
+    box-shadow: 0 0 5px rgba(77, 168, 255, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    padding: 14px;
+    background: #4DA8FF;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #3d8dd9;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    header {
+        height: 60vh;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .webcam iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 30px 5%;
+    }
+
+    .button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div class="hero">
+        <h1>Segelflugverein Alpenblick</h1>
+        <p>Erleben Sie die Freiheit des Segelfliegens in den Alpen</p>
+        <a href="#contact" class="button">Kontakt Aufnehmen</a>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about">
+    <h2>Über Uns</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <h3>Willkommen bei Alpenblick</h3>
+            <p>Der Segelflugverein Alpenblick ist seit 1985 eine führende Institution für Segelflugausbildung und -sport in der Region. Mit modernen Flugzeugen und erfahrenen Instruktoren bieten wir das beste Erlebnis für Anfänger und erfahrene Piloten.</p>
+            <p>Unsere Mission ist es, die Begeisterung für den Segelflug zu teilen und eine sichere, professionelle Umgebung für alle Mitglieder zu schaffen.</p>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">✈️</div>
+                <h3>Moderne Flotte</h3>
+                <p>Gut gewartete Segelflugzeuge für verschiedene Flugklassen</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3>Erfahrene Trainer</h3>
+                <p>Zertifizierte Instruktoren mit jahrelanger Erfahrung</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Professionelle Schulung</h3>
+                <p>Umfassendes Trainings- und Zertifizierungsprogramm</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Webcam Section -->
+<section id="webcam">
+    <h2>Live Blick auf die Startbahn</h2>
+    <div class="webcam">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Live-Webcam vom Startbereich. (Hier kann ein echter Live-Stream eingebettet werden)</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Kontakt & Anmeldung</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Kontaktinformationen</h3>
+            <p>
+                <strong>Adresse:</strong><br>
+                Alpenblick Flugplatz<br>
+                Bergstraße 42<br>
+                6900 Alpenregion
+            </p>
+            <p>
+                <strong>Telefon:</strong><br>
+                +43 (0) 512 / 12345
+            </p>
+            <p>
+                <strong>E-Mail:</strong><br>
+                <a href="mailto:info@alpenblick.at" style="color: #4DA8FF; text-decoration: none;">info@alpenblick.at</a>
+            </p>
+            <p>
+                <strong>Öffnungszeiten:</strong><br>
+                Mo - Fr: 8:00 - 18:00<br>
+                Sa - So: 9:00 - 17:00
+            </p>
+        </div>
+        <div class="contact-form">
+            <h3>Nachricht Senden</h3>
+            <form>
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-Mail *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Nachricht *</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Nachricht Senden</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Segelflugverein Alpenblick. Alle Rechte vorbehalten.</p>
+    <p>Designed with ❤️ for aviation enthusiasts</p>
+</footer>
+
+</body>
+</html>
